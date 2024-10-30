@@ -5,11 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:save_plan/constant/app_color.dart';
 import 'package:save_plan/resource/R.dart';
-import 'package:save_plan/routers/routers.dart';
-import 'package:save_plan/services/triangle.dart';
 import 'package:save_plan/ui/home/detail/logic.dart';
 import 'package:save_plan/utils/load_image.dart';
-import 'package:save_plan/utils/toast_util.dart';
 
 class DetailPage extends StatefulWidget {
   @override
@@ -174,7 +171,7 @@ class _DetailPageState extends State<DetailPage> {
                     }),
                     GestureDetector(
                       onTap: () {
-                        Get.toNamed(Routers.record, parameters: {
+                        Get.toNamed('/record', parameters: {
                           'plan': jsonEncode(_logic.state.plan.value)
                         })!
                             .then((value) {

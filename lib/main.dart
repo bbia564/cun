@@ -6,8 +6,6 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:save_plan/constant/app_theme.dart';
-import 'package:save_plan/routers/app_router.dart';
-import 'package:save_plan/routers/routers.dart';
 import 'package:save_plan/services/db.dart';
 import 'package:save_plan/ui/center/view.dart';
 import 'package:save_plan/ui/home/detail/record/view.dart';
@@ -15,6 +13,10 @@ import 'package:save_plan/ui/home/detail/view.dart';
 import 'package:save_plan/ui/home/view.dart';
 import 'package:save_plan/ui/setting/view.dart';
 import 'package:save_plan/ui/view.dart';
+import 'package:save_plan/utils/pasion.dart';
+
+import 'batool/batool_binding.dart';
+import 'batool/batool_view.dart';
 
 void main() {
   runApp(const App());
@@ -69,7 +71,7 @@ class _AppState extends State<App> {
               theme: AppTheme.mainTheme,
               getPages: Xis,
               debugShowCheckedModeBanner: false,
-              initialRoute: '/main',
+              initialRoute: '/',
               // navigatorObservers: [
               //   FlutterSmartDialog.observer,
               // ],
@@ -96,10 +98,15 @@ class _AppState extends State<App> {
   }
 }
 List<GetPage<dynamic>> Xis = [
+  GetPage(name: '/', page: () => const BatoolView(),binding: BatoolBinding()),
   GetPage(name: '/main', page: () => HomePage()),
   GetPage(
     name: '/home',
     page: () => HomeView(),
+  ),
+  GetPage(
+    name: '/btool',
+    page: () => const Pasion(),
   ),
   GetPage(
     name: '/settings',

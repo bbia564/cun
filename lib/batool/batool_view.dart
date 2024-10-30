@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 
 import 'batool_logic.dart';
 
-class RentalBuildView extends GetView<PageLogic> {
-  const RentalBuildView({super.key});
+class BatoolView extends GetView<PageLogic> {
+  const BatoolView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.gleason.value
-              ? const CircularProgressIndicator(color: Colors.green)
+          () => controller.greenholt.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class RentalBuildView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.ntmswrd();
+              controller.nfpa();
             },
             icon: const Icon(
               Icons.restart_alt,

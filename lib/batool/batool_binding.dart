@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 import 'batool_logic.dart';
 
-class RentalBuildBinding extends Bindings {
+class BatoolBinding extends Bindings {
   @override
   void dependencies() {
     Get.put(

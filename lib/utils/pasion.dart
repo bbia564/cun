@@ -24,7 +24,7 @@ class Pasion extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.zetrlc.value)),
+              url: WebUri.uri(Uri.parse(controller.gxqlzr.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

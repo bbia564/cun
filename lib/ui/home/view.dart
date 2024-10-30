@@ -9,7 +9,6 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:save_plan/constant/app_color.dart';
 import 'package:save_plan/resource/R.dart';
-import 'package:save_plan/routers/routers.dart';
 import 'package:save_plan/services/db.dart';
 import 'package:save_plan/services/triangle.dart';
 import 'package:save_plan/ui/home/logic.dart';
@@ -87,7 +86,7 @@ class _HomeViewState extends State<HomeView> {
                                 itemBuilder: (context, index) {
                                   return GestureDetector(
                                       onTap: () {
-                                        Get.toNamed(Routers.detail,
+                                        Get.toNamed('/detail',
                                                 parameters: {
                                               'plan': jsonEncode(
                                                   _logic.state.plans[index])
@@ -260,7 +259,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routers.detail,
+                      Get.toNamed('/detail',
                           parameters: {
                             'plan': jsonEncode(plan)
                           })!
